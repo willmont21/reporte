@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ReportesPorClienteComponent } from './reportes-por-cliente/reportes-por-cliente.component';
 import { ListadodeClienteComponent } from './listadode-cliente/listadode-cliente.component';
 import { ReporteComponent } from './reporte/reporte.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ReporteComponent } from './reporte/reporte.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
