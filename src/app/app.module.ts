@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReportesPorClienteComponent } from './reportes-por-cliente/reportes-por-cliente.component';
+import { ListadodeClienteComponent } from './listadode-cliente/listadode-cliente.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReportesPorClienteComponent
+    ReportesPorClienteComponent,
+    ListadodeClienteComponent
   ],
   imports: [
     BrowserModule,
