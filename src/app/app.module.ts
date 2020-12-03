@@ -7,13 +7,15 @@ import { ReportesPorClienteComponent } from './reportes-por-cliente/reportes-por
 import { ListadodeClienteComponent } from './listadode-cliente/listadode-cliente.component';
 import { ReporteComponent } from './reporte/reporte.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReportesPorClienteComponent,
     ListadodeClienteComponent,
-    ReporteComponent
+    ReporteComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
