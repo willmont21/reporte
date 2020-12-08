@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ReportesPorClienteComponent } from './reportes-por-cliente/reportes-por-cliente.component';
-import { ListadodeClienteComponent } from './listadode-cliente/listadode-cliente.component';
-import { ReporteComponent } from './reporte/reporte.component';
+import { ReportesPorClienteComponent } from '../app/components/reportes-por-cliente/reportes-por-cliente.component';
+import { ListadodeClienteComponent } from '../app/components/listadode-cliente/listadode-cliente.component';
+import { ReporteComponent } from '../app/components/reporte/reporte.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from '../app/components/home/home.component';
 
 @NgModule({
   declarations: [
