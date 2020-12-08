@@ -8,6 +8,7 @@ import { ListadodeClienteComponent } from '../app/components/listadode-cliente/l
 import { ReporteComponent } from '../app/components/reporte/reporte.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from '../app/components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HomeComponent } from '../app/components/home/home.component';
     ReportesPorClienteComponent,
     ListadodeClienteComponent,
     ReporteComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
