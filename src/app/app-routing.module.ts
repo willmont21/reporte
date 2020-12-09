@@ -7,12 +7,12 @@ import { ReportesPorClienteComponent } from '../app/components/reportes-por-clie
 import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch:'full'},
+  { path: '', redirectTo: 'reportecliente', pathMatch:'full'},
   { path: 'home', component:HomeComponent },
   { path: 'login', component:LoginComponent },
   { path: 'reporte', component:ReporteComponent },
   { path: 'reportecliente', component:ReportesPorClienteComponent},
-  { path: 'listado', component:ListadodeClienteComponent}
+  { path: 'listado', component:ListadodeClienteComponent} 
 
   
 

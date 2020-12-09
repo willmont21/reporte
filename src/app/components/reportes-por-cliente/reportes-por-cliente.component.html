@@ -1,1 +1,81 @@
-<p>reportes-por-cliente works!</p>
+<style>
+    #encabezado{
+        padding-top: 5em;
+    }
+
+    #empresa{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 15px;
+    }
+    #tabla{
+        padding-top: 2em;
+    }
+</style>
+
+<div class="container">
+    <div id="encabezado">
+        <div class="row justify-content-start">
+            <div class="col-4" id="empresa">
+                <span>{{ title }}</span>
+            </div>
+        </div>
+        <div class="row justify-content-start">
+            <div class="col-1">
+                <span>Desde:</span>
+            </div>
+            <div class="col-4">
+                <span>fecha</span>
+            </div>
+        </div>
+        <div class="row justify-content-start">
+            <div class="col-1">
+                <span>Hasta:</span>
+            </div>
+            <div class="col-4">
+                <span>fecha</span>
+            </div>
+        </div>
+    </div>
+    <div class="table-responsive-lg" id="tabla">
+        <table class="table table-sm">
+            <thead>
+              <tr>
+                <th scope="col">Nombre del sistema de impresión</th>
+                <th scope="col">ID de cuenta</th>
+                <th scope="col">Nombre de cliente</th>
+                <th scope="col">Copia e imprimir (total)</th>
+                <th scope="col">Copia(total)</th>
+                <th scope="col">Imprimir (total)</th>
+                <th scope="col">Escaneo</th>
+                <th scope="col">Copia a todo color</th>
+                <th scope="col">Copia blanco y negro</th>
+                <th scope="col">Imprimir a todo color</th>
+                <th scope="col">Imprimir blanco y negro</th>
+                <th scope="col">Total a todo color</th>
+                <th scope="col">Total blanco y negro</th>
+                <th scope="col">Fecha de conteo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <!--<th scope="row">1</th>-->
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+             
+            </tbody>
+          </table>
+    </div>
+</div>

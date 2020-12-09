@@ -9,6 +9,7 @@ import { ReporteComponent } from '../app/components/reporte/reporte.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from '../app/components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { ListadodemesComponent } from './components/listadodemes/listadodemes.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LoginComponent } from './components/login/login.component';
     ListadodeClienteComponent,
     ReporteComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    ListadodemesComponent
   ],
   imports: [
     BrowserModule,
