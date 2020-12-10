@@ -11,8 +11,8 @@ export class UserService {
   private URL = 'http://localhost:3000/';
   constructor(private http: HttpClient) { }
 
-/*
-  signIn(login) {
-    return this.http.post<any>(this.URL + '/login', login);
-  }*/
+
+  signIn(user: { nombre: string; pass: string; }) {
+    return this.http.post<any>(this.URL + 'login', user);
+  }
 }

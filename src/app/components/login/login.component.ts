@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   public isErrorGoogle = false;
   public loginError = "";
   
-  User = {
+  userSet = {
     nombre:'',
     pass:''
   }
@@ -33,20 +33,16 @@ export class LoginComponent implements OnInit {
     console.log('login.component cargado !!');
   }
 
-  /*onSubmit() {
-    this.userService.signIn(this.User)
+  onSubmint() {
+  //signIn(f: NgForm) {
+    //if(f.valid){
+      this.userService.signIn(this.userSet)
       .subscribe(
         res=> {
           this.router.navigate(['/listado']);
         },
-        error => {
-          this.isError = true;
-          this.loginError = error.error;
-          setTimeout(() => {
-            this.isError = false;
-          }, 5000);
-        }
-      );  
-    
-  }*/
+        error => {console.log(<any>error);}
+      );
+    }  
+ // }
 }

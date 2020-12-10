@@ -11,6 +11,10 @@ import { HomeComponent } from '../app/components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { ListadodemesComponent } from './components/listadodemes/listadodemes.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DxLoadPanelModule, DxButtonModule, DxSelectBoxModule, DxAutocompleteModule, DxListModule, DxNumberBoxModule, DxTextBoxModule, DxDataGridModule, DxFileUploaderModule, DxPopupModule } from 'devextreme-angular';
+import { DxFileManagerModule } from 'devextreme-angular'
+import { DxAccordionModule, DxSwitchModule, DxCheckBoxModule, DxScrollViewModule, DxButtonGroupModule, DxRadioGroupModule, } from "devextreme-angular";
 
 @NgModule({
   declarations: [
@@ -26,6 +30,24 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    FormsModule,
+    DxLoadPanelModule,
+    DxRadioGroupModule,
+    DxButtonModule,
+    DxButtonGroupModule,
+    DxFileUploaderModule,
+    DxSelectBoxModule,
+    DxAutocompleteModule,
+    DxSwitchModule,
+    DxPopupModule,
+    DxListModule,
+    DxAccordionModule,
+    DxNumberBoxModule,
+    DxCheckBoxModule,
+    DxTextBoxModule,
+    DxFileManagerModule,
+    DxDataGridModule,
+    DxScrollViewModule,
     HttpClientModule
   ],
   providers: [],
