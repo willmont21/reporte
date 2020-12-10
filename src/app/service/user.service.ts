@@ -7,14 +7,12 @@ import { User } from '../models/user';
   providedIn: 'root'
 })
 export class UserService {
-  
-  
 
   private URL = 'http://localhost:3000/';
   constructor(private http: HttpClient) { }
 
-
-  signIn(User) {
-    return this.http.post<any>(this.URL + '/login', User);
-  }
+/*
+  signIn(login) {
+    return this.http.post<any>(this.URL + '/login', login);
+  }*/
 }

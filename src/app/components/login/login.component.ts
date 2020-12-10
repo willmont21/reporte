@@ -10,6 +10,7 @@ import { NgForm } from '@angular/forms';
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
+  providers: [UserService]
 })
 
 export class LoginComponent implements OnInit {
@@ -32,8 +33,8 @@ export class LoginComponent implements OnInit {
     console.log('login.component cargado !!');
   }
 
-  signIn(f: NgForm) {
-    if (f.valid) {this.userService.signIn(this.User)
+  /*onSubmit() {
+    this.userService.signIn(this.User)
       .subscribe(
         res=> {
           this.router.navigate(['/listado']);
@@ -46,6 +47,6 @@ export class LoginComponent implements OnInit {
           }, 5000);
         }
       );  
-    }
-  }
+    
+  }*/
 }
