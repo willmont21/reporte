@@ -14,10 +14,16 @@
       </div>
     </div>
     <div class="row justify-content-md-center">
-      <div class="col col-lg-4">
+      <div >
         <div class="md-form">
           <input step="box-sizing: 25 px" type="text" id="form1" class="form-control" placeholder="Nombre de cliente">
-          <button type="button" class="btn btn-secondary btn-sm btn-block">Buscar</button>
+          <dx-button
+          stylingMode="contained"
+          text="Buscar"
+          type="normal"
+          [width]="150"
+          (onClick)="clientes()">
+        </dx-button>
         </div>
       </div>
     </div>
@@ -34,4 +40,35 @@
       </div>
     </div>
   </div>
+
+
+ <!--
+  <form action="your-action" (submit)="clientes()">
+    <dx-form id="form"
+        
+        [readOnly]="false"
+        [showColonAfterLabel]="true"
+        [showValidationSummary]="true"
+        validationGroup="customerData">
+        <dxi-item itemType="group" caption="Log in">
+            <dxi-item dataField="Cliente">
+                <dxi-validation-rule 
+                    type="required"
+                    message="Nombre del cliente">
+                </dxi-validation-rule>
+                <dxi-validation-rule 
+                    type="email"
+                    message="Cliente no encontrado">
+                </dxi-validation-rule>
+            </dxi-item>
+        </dxi-item>
+        <dxi-item 
+            itemType="button"
+            horizontalAlignment="center"
+            >
+        </dxi-item>
+    </dx-form>
+</form>
+
+-->
   <router-outlet></router-outlet>

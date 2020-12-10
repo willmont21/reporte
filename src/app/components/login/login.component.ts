@@ -3,7 +3,13 @@ import { User } from '../../models/user';
 import { UserService } from '../../service/user.service';
 import { Router, ActivatedRoute, Params }  from '@angular/router';
 import { NgForm } from '@angular/forms';  
-
+import { DxCheckBoxModule,
+  DxSelectBoxModule,
+  DxNumberBoxModule,
+  DxButtonModule,
+  DxFormModule,
+  DxAutocompleteModule,
+  DxFormComponent } from 'devextreme-angular';
 
 
 @Component({
@@ -16,9 +22,6 @@ import { NgForm } from '@angular/forms';
 export class LoginComponent implements OnInit {
   title = String;
   usuario = User;
-  public isError = false;
-  public isErrorGoogle = false;
-  public loginError = "";
   
   userSet = {
     nombre:'',
@@ -34,8 +37,6 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmint() {
-  //signIn(f: NgForm) {
-    //if(f.valid){
       this.userService.signIn(this.userSet)
       .subscribe(
         res=> {
@@ -44,5 +45,4 @@ export class LoginComponent implements OnInit {
         error => {console.log(<any>error);}
       );
     }  
- // }
 }

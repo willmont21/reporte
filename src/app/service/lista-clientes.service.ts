@@ -14,4 +14,8 @@ export class ListaClientesService {
   getClientes() {
     return this.http.get<any[]>(this.URL + '/cliente');
   }
+
+  busqueda(user: { nombre: string; }) {
+    return this.http.post<any>(this.URL + 'login', user);
+  }
 }
