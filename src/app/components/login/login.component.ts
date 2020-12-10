@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
       this.userService.signIn(this.userSet)
       .subscribe(
         res=> {
-          this.router.navigate(['/listado']);
+          this.router.navigate(['/home']);
         },
         error => {console.log(<any>error);}
       );

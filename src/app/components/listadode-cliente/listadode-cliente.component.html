@@ -1,4 +1,4 @@
-<style>
+<!--<style>
     #encabezado{
         padding-top: 5em;
     }
@@ -17,4 +17,79 @@
             </div>
         </div>
     </div>
+</div>-->
+
+<div class="container" >
+    <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+            <dx-data-grid id="gridContainer"  #grid
+                [dataSource]="todos"
+                keyExpr="idcliente"
+                [allowColumnReordering]="true"
+                [allowColumnResizing]="true"
+                [columnAutoWidth]="true"
+                [showRowLines]="true"
+                [showBorders]="true">
+                <dxo-search-panel [visible]="true"></dxo-search-panel>
+
+                <!--<dxi-column dataField="idcliente" [width]="80" caption="Id"></dxi-column>-->
+                <dxi-column dataField="name" [width]="130"></dxi-column>
+                <dxi-column dataField="ruc" [width]="130"></dxi-column>
+                <dxi-column dataField="razonSocial" [width]="130"></dxi-column>
+                <dxi-column dataField="fechaConteo" [width]="100" dataType="date"></dxi-column>
+                
+            <dxo-editing
+                mode="popup"
+                [allowUpdating]="true"
+                [allowDeleting]="true"
+                [allowAdding]="true">
+            </dxo-editing>
+            </dx-data-grid>
+        </div>
+    </div>
 </div>
+            
+
+<!--
+    <dxi-column dataField="Id"></dxi-column>
+    <dxi-column dataField="Name"></dxi-column>
+    <dxi-column dataField="RUC"></dxi-column>
+    <dxi-column dataField="Razon social"></dxi-column>
+    <dxi-column
+        dataField="Fecha conteo"
+        dataType="date">
+    </dxi-column>
+    -->
+<!--
+<dx-data-grid id="gridContainer"
+    [dataSource]="todos"
+    [remoteOperations]="false"
+    [allowColumnReordering]="true"
+    [rowAlternationEnabled]="true"
+    [showBorders]="true">
+
+    <dxo-paging [pageSize]="10"></dxo-paging>
+    <dxo-pager
+        [showPageSizeSelector]="true"
+        [allowedPageSizes]="[10, 15, 50, 100]"
+    ></dxo-pager>
+    <dxo-search-panel
+        [visible]="true"
+        [highlightCaseSensitive]="true"
+    ></dxo-search-panel>
+    <dxo-group-panel
+        [visible]="true"
+    ></dxo-group-panel>
+    <dxo-grouping
+        [autoExpandAll]="false"
+    ></dxo-grouping>
+
+    <dxi-column dataField="Id" dataType="number"></dxi-column>
+    <dxi-column dataField="Name" dataType="date"></dxi-column>
+    <dxi-column dataField="RUC" dataType="number"></dxi-column>
+    <dxi-column dataField="Razon social" dataType="date"></dxi-column>
+    <dxi-column dataField="Fecha conteo" dataType="date">
+    </dxi-column>
+
+</dx-data-grid>
+-->

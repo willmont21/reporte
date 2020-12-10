@@ -28,7 +28,6 @@ export class ReportesPorClienteComponent implements OnInit {
       this.repo = res; 
       console.log(this.repo)
     })
-   
   }
 
 }
