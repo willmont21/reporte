@@ -1,81 +1,39 @@
-<style>
-    #encabezado{
-        padding-top: 5em;
-    }
-
-    #empresa{
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-size: 15px;
-    }
-    #tabla{
-        padding-top: 2em;
-    }
-</style>
-
 <div class="container">
-    <div id="encabezado">
-        <div class="row justify-content-start">
-            <div class="col-4" id="empresa">
-                <span>{{ title }}</span>
-            </div>
+
+</div>
+<div class="container" >
+    <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+            <dx-data-grid id="gridContainer"  #grid
+                [dataSource]="repo"
+                keyExpr="idreportemes"
+                [allowColumnReordering]="true"
+                [allowColumnResizing]="true"
+                [showRowLines]="true"
+                [showBorders]="true">
+                <dxo-search-panel [visible]="true"></dxo-search-panel>
+                <!--[columnAutoWidth]="true"-->
+                <!--<dxi-column dataField="idcliente" [width]="80" caption="Id"></dxi-column>-->
+                <dxi-column dataField="modelName" [width]="100" ></dxi-column>
+                <dxi-column dataField="ipAddress" [width]="120"></dxi-column>
+                <dxi-column dataField="cuentaId" [width]="80"></dxi-column>
+                <dxi-column dataField="cuentaNombre" [width]="150"></dxi-column>
+                <dxi-column dataField="printTotal" [width]="80"></dxi-column>
+                <dxi-column dataField="copyTotal" [width]="80"></dxi-column>
+                <dxi-column dataField="scanTotal" [width]="80"></dxi-column>
+                <dxi-column dataField="printFullColor" [width]="90"></dxi-column>
+                <dxi-column dataField="printBlackWhite" [width]="90"></dxi-column>
+                <dxi-column dataField="copyFullColor" [width]="90"></dxi-column>
+                <dxi-column dataField="copyBlackWhite" [width]="90"></dxi-column>
+                <dxi-column dataField="timeStamp" [width]="100" dataType="date"></dxi-column>
+                
+            <!--<dxo-editing
+                mode="popup"
+                [allowUpdating]="true"
+                [allowDeleting]="true"
+                [allowAdding]="true">
+            </dxo-editing>-->
+            </dx-data-grid>
         </div>
-        <div class="row justify-content-start">
-            <div class="col-1">
-                <span>Desde:</span>
-            </div>
-            <div class="col-4">
-                <span>fecha</span>
-            </div>
-        </div>
-        <div class="row justify-content-start">
-            <div class="col-1">
-                <span>Hasta:</span>
-            </div>
-            <div class="col-4">
-                <span>fecha</span>
-            </div>
-        </div>
-    </div>
-    <div class="table-responsive-lg" id="tabla">
-        <table class="table table-sm">
-            <thead>
-              <tr>
-                <th scope="col">Nombre del sistema de impresión</th>
-                <th scope="col">ID de cuenta</th>
-                <th scope="col">Nombre de cliente</th>
-                <th scope="col">Copia e imprimir (total)</th>
-                <th scope="col">Copia(total)</th>
-                <th scope="col">Imprimir (total)</th>
-                <th scope="col">Escaneo</th>
-                <th scope="col">Copia a todo color</th>
-                <th scope="col">Copia blanco y negro</th>
-                <th scope="col">Imprimir a todo color</th>
-                <th scope="col">Imprimir blanco y negro</th>
-                <th scope="col">Total a todo color</th>
-                <th scope="col">Total blanco y negro</th>
-                <th scope="col">Fecha de conteo</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngfor="let reporte of repo ">
-                <!--<th scope="row">1</th>-->
-                <td >dsd</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-             
-            </tbody>
-          </table>
     </div>
 </div>

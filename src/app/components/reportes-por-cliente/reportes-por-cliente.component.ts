@@ -3,6 +3,7 @@ import { ReporteclienteService } from '../../service/reportecliente.service';
 import { Reporte} from '../../models/reporte'
 import { Router } from '@angular/router'
 import { NgForm } from '@angular/forms';
+import { DxDataGridModule, DxBoxModule, DxTemplateModule} from 'devextreme-angular';
 
 @Component({
   selector: 'app-reportes-por-cliente',
@@ -19,11 +20,11 @@ export class ReportesPorClienteComponent implements OnInit {
 
   ngOnInit(): void {
     console.log("uno")
-    this.traerReportes();
+    this.traerReportesId();
   }
 
-  traerReportes() {
-    this.reporte.getReporte().subscribe(res => {
+  traerReportesId() {
+    this.reporte.getReporteId(1).subscribe(res => {
       this.reporte.reportes = res as Reporte[];
       this.repo = res; 
       console.log(this.repo)

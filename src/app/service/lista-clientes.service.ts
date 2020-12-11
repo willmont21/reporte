@@ -15,7 +15,8 @@ export class ListaClientesService {
     return this.http.get<any[]>(this.URL + '/cliente');
   }
 
-  busqueda(user: { nombre: string; }) {
-    return this.http.post<any>(this.URL + 'login', user);
+  busqueda(clie: { nombre: string; }) {
+    console.log(clie);
+    return this.http.post<any>(this.URL + '/buscar', clie);
   }
 }

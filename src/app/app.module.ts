@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DxLoadPanelModule, DxButtonModule, DxSelectBoxModule, DxAutocompleteModule, DxListModule, DxNumberBoxModule, DxTextBoxModule, DxDataGridModule, DxFileUploaderModule, DxPopupModule } from 'devextreme-angular';
 import { DxFileManagerModule } from 'devextreme-angular'
 import { DxAccordionModule, DxSwitchModule, DxCheckBoxModule, DxScrollViewModule, DxButtonGroupModule, DxRadioGroupModule, } from "devextreme-angular";
+import { CargaArchivosComponent } from './components/carga-archivos/carga-archivos.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DxAccordionModule, DxSwitchModule, DxCheckBoxModule, DxScrollViewModule
     ReporteComponent,
     HomeComponent,
     LoginComponent,
-    ListadodemesComponent
+    ListadodemesComponent,
+    CargaArchivosComponent
   ],
   imports: [
     BrowserModule,

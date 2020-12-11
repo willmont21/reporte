@@ -11,7 +11,7 @@ export class ReporteclienteService {
   private URL = 'http://localhost:3000';
   constructor(private http: HttpClient) { }
 
-  getReporte() {
-    return this.http.get<any[]>(this.URL + '/reporte');
+  getReporteId(id : number) {
+    return this.http.get<any[]>(this.URL + '/reporte/'+id);
   }
 }

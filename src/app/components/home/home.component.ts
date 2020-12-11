@@ -10,6 +10,7 @@ import { ListaClientesService } from '../../service/lista-clientes.service';
 })
 export class HomeComponent implements OnInit {
   title = 'OFISTORE S.A.';
+  clie = Cliente;
 
   userNam = {
     nombre:'',
@@ -17,6 +18,7 @@ export class HomeComponent implements OnInit {
   constructor(private buscado: ListaClientesService, private router: Router) { }
 
   ngOnInit(): void {
+    console.log("home works")
   }
 
   clientes(){
@@ -27,9 +29,14 @@ export class HomeComponent implements OnInit {
     this.buscado.busqueda(this.userNam)
     .subscribe(
       res=> {
+        console.log(res);
         this.router.navigate(['/reportecliente']);
+        
       },
-      error => {console.log(<any>error);}
+      error => {
+        console.log("error");
+        console.log(<any>error);
+      }
     );
   }  
 }
