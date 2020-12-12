@@ -5,16 +5,16 @@ import { ListadodeClienteComponent } from '../app/components/listadode-cliente/l
 import { ReporteComponent } from '../app/components/reporte/reporte.component';
 import { ReportesPorClienteComponent } from '../app/components/reportes-por-cliente/reportes-por-cliente.component';
 import { LoginComponent } from './components/login/login.component';
+import { CargaArchivosComponent} from '../app/components/carga-archivos/carga-archivos.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'reportecliente', pathMatch:'full'},
+  { path: '', redirectTo: 'carga', pathMatch:'full'},
   { path: 'home', component:HomeComponent },
   { path: 'login', component:LoginComponent },
   { path: 'reporte', component:ReporteComponent },
   { path: 'reportecliente', component:ReportesPorClienteComponent},
-  { path: 'listado', component:ListadodeClienteComponent} 
-
-  
+  { path: 'listado', component:ListadodeClienteComponent},
+  { path: 'carga', component:CargaArchivosComponent}
 
 ];
 

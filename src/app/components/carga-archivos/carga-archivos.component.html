@@ -1,1 +1,11 @@
-<p>carga-archivos works!</p>
+<form action="https://mydomain.com/MyUploadService" method="post" enctype="multipart/form-data">
+  <dx-file-uploader
+      name="file"
+      (onValueChanged)="load($event)"
+      uploadMode="useForm">
+      <!-- Uncomment the following lines to allow a user to upload multiple files -->
+      <!-- [multiple]="true" -->
+      <!-- name="files[]" -->
+  </dx-file-uploader>
+  <input type="submit">
+</form>
