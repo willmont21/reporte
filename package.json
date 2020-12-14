@@ -25,8 +25,10 @@
     "@ng-bootstrap/ng-bootstrap": "^8.0.0",
     "bootstrap": "^4.5.0",
     "csv-model": "^1.0.3",
+    "csvtojson": "^2.0.10",
     "devextreme": "20.2.4",
     "devextreme-angular": "20.2.4",
+    "mysql": "^2.18.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
