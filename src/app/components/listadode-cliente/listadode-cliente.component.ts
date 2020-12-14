@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DxDataGridModule, DxBoxModule } from 'devextreme-angular';
-import { Cliente} from '../../models/cliente';
+import { Cliente } from '../../models/cliente';
 import { ListaClientesService } from '../../service/lista-clientes.service';
 import { Router } from '@angular/router'
 
@@ -25,7 +25,7 @@ export class ListadodeClienteComponent implements OnInit {
   traerClientes() {
     this.clientes.getClientes().subscribe(res => {
       this.clientes.clientes = res as Cliente[];
-      this.todos = res; 
+      this.todos = res;
       console.log(this.todos)
     })
   }

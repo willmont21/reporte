@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Cliente} from '../models/cliente'
-import { HttpClient} from "@angular/common/http";
+import { Cliente } from '../models/cliente'
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,7 @@ export class ListaClientesService {
     return this.http.get<any[]>(this.URL + '/cliente');
   }
 
-  busqueda(clie: { nombre: string; }) {
+  busqueda(clie: { name: string; }) {
     console.log(clie);
     return this.http.post<any>(this.URL + '/buscar', clie);
   }

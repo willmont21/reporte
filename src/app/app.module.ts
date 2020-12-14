@@ -12,10 +12,12 @@ import { LoginComponent } from './components/login/login.component';
 import { ListadodemesComponent } from './components/listadodemes/listadodemes.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DxLoadPanelModule, DxButtonModule, DxSelectBoxModule, DxAutocompleteModule, DxListModule, DxNumberBoxModule, DxTextBoxModule, DxDataGridModule, DxFileUploaderModule, DxPopupModule } from 'devextreme-angular';
+import { DxLoadPanelModule, DxButtonModule, DxSelectBoxModule, DxAutocompleteModule, DxListModule, DxNumberBoxModule, DxTextBoxModule, DxDataGridModule, DxFileUploaderModule, DxPopupModule, DxLoadIndicatorModule } from 'devextreme-angular';
 import { DxFileManagerModule } from 'devextreme-angular'
 import { DxAccordionModule, DxSwitchModule, DxCheckBoxModule, DxScrollViewModule, DxButtonGroupModule, DxRadioGroupModule, } from "devextreme-angular";
-import { CargaArchivosComponent } from './components/carga-archivos/carga-archivos.component';
+import { DatePipe } from '@angular/common';
+import { CargaArchivosComponent } from './components/carga-archivos/carga-archivos.component'
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { CargaArchivosComponent } from './components/carga-archivos/carga-archiv
     LoginComponent,
     ListadodemesComponent,
     CargaArchivosComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -50,9 +53,10 @@ import { CargaArchivosComponent } from './components/carga-archivos/carga-archiv
     DxFileManagerModule,
     DxDataGridModule,
     DxScrollViewModule,
+    DxLoadIndicatorModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

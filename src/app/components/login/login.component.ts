@@ -40,7 +40,10 @@ export class LoginComponent implements OnInit {
       this.userService.signIn(this.userSet)
       .subscribe(
         res=> {
-          this.router.navigate(['/home']);
+          if(res.roll == "Admin")
+            this.router.navigate(['/home']);
+          else
+           this.router.navigate(['/reportecliente']);
         },
         error => {console.log(<any>error);}
       );

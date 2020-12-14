@@ -1,8 +1,8 @@
-export class Cliente{
+export class Cliente {
 	constructor(
 		public name: string,
 		public ruc: number,
-        public razonSocial: string,
-        public fechaConteo: Date
-	){}
+		public razonSocial: string,
+		public fechaConteo: Date
+	) { }
 }

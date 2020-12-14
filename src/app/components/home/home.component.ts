@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, Params }  from '@angular/router';
-import { Cliente} from '../../models/cliente';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+import { Cliente } from '../../models/cliente';
 import { ListaClientesService } from '../../service/lista-clientes.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   clie = Cliente;
 
   userNam = {
-    nombre:'',
+    name: '',
   }
   constructor(private buscado: ListaClientesService, private router: Router) { }
 
@@ -21,24 +21,23 @@ export class HomeComponent implements OnInit {
     console.log("home works")
   }
 
-  clientes(){
+  clientes() {
     this.router.navigate(['/listado']);
   }
 
   onSubmint() {
     this.buscado.busqueda(this.userNam)
-    .subscribe(
-      res=> {
-        console.log(res);
-        this.router.navigate(['/reportecliente']);
-        
-      },
-      error => {
-        console.log("error");
-        console.log(<any>error);
-      }
-    );
-  }  
+      .subscribe(
+        res => {
+          console.log(res);
+          this.router.navigate(['/reportecliente']);
+
+        },
+        error => {
+          console.log(<any>error);
+        }
+      );
+  }
 }
 
 

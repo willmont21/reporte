@@ -3,29 +3,20 @@
       name="file"
       (onValueChanged)="load($event)"
       uploadMode="useForm">-->
-      <!-- Uncomment the following lines to allow a user to upload multiple files -->
-      <!-- [multiple]="true" -->
-      <!-- name="files[]" -->
-  <!--</dx-file-uploader>
+<!-- Uncomment the following lines to allow a user to upload multiple files -->
+<!-- [multiple]="true" -->
+<!-- name="files[]" -->
+<!--</dx-file-uploader>
   <input type="submit">
 </form>-->
 
 <input type="file" #csvReader name="Upload CSV" id="txtFileUpload" (change)="uploadListener($event)" accept=".csv" />
 
-<dx-data-grid id="gridContainer"  #grid
-                [dataSource]="data"
-                keyExpr="modelName"
-                [allowColumnReordering]="true"
-                [allowColumnResizing]="true"
-                [columnAutoWidth]="true"
-                [showRowLines]="true"
-                [showBorders]="true">
-</dx-data-grid>
+<!--<dx-load-indicator [(visible)]="isLoadIndicatorVisible">
+</dx-load-indicator>-->
+  <dx-data-grid id="gridContainer" #grid [dataSource]="data" keyExpr="modelName" [allowColumnReordering]="true"
+    [allowColumnResizing]="true" [columnAutoWidth]="true" [showRowLines]="true" [showBorders]="true">
+  </dx-data-grid>
 
-<dx-button
-          stylingMode="contained"
-          text="Buscar"
-          type="normal"
-          [width]="150"
-          (onClick)="onSubmint()">
-        </dx-button>
+  <dx-button stylingMode="contained" text="Buscar" type="normal" [width]="150" (onClick)="onSubmint()">
+  </dx-button>
